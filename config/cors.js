@@ -1,21 +1,11 @@
 require('dotenv').config();
 
 const getCorsConfig = () => {
-  const environment = process.env.NODE_ENV;
-
-  const configs = {
-    dev: {
-      origin: [process.env.FRONTEND_URL_DEV].filter(Boolean),
-      credentials: true,
-    },
-
-    production: {
-      origin: [process.env.FRONTEND_URL].filter(Boolean),
-      credentials: true,
-    },
-  };
-
   const baseConfig = {
+    origin: [process.env.FRONTEND_URL]
+      .filter(Boolean)
+      .flatMap((url) => url.split(',')),
+    credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
     allowedHeaders: [
       'Origin',
@@ -27,7 +17,7 @@ const getCorsConfig = () => {
     ],
   };
 
-  return { ...baseConfig, ...configs[environment] };
+  return baseConfig;
 };
 
 module.exports = getCorsConfig();
