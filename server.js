@@ -5,18 +5,18 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/database');
 const { initializeSocket } = require('./utils/socketManager');
-
 const webhookRoutes = require('./routes/webhook');
 const chatRoutes = require('./routes/chat');
-
+const corsConfig = require('./config/cors')
 const app = express();
+
 const server = http.createServer(app);
 
 const io = initializeSocket(server);
 
 connectDB();
 
-app.use(cors());
+app.use(cors(corsConfig));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
