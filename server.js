@@ -17,6 +17,7 @@ const io = initializeSocket(server);
 connectDB();
 
 app.use(cors(corsConfig));
+app.options('*', cors(corsConfig));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
