@@ -8,13 +8,13 @@ This backend handles WhatsApp webhook payloads, stores conversation data in Mong
 
 ## Features
 
-- 🔗 **WhatsApp Webhook Processing** - Handles incoming messages and status updates
-- 💬 **Real-time Messaging** - WebSocket support for live chat updates
-- 📊 **Chat Management** - Complete CRUD operations for conversations
-- 👤 **Account Profiles** - Business profile management with contact details
-- 🔒 **Secure CORS** - Environment-specific security configurations
-- 📱 **Message Status Tracking** - Delivery, read receipts, and error handling
-- ☁️ **Cloud Ready** - Optimized for Render deployment with MongoDB Atlas
+- **WhatsApp Webhook Processing** - Handles incoming messages and status updates
+- **Real-time Messaging** - WebSocket support for live chat updates
+- **Chat Management** - Complete CRUD operations for conversations
+- **Account Profiles** - Business profile management with contact details
+- **Secure CORS** - Environment-specific security configurations
+- **Message Status Tracking** - Delivery, read receipts, and error handling
+- **Cloud Ready** - Optimized for Render deployment with MongoDB Atlas
 
 
 ## Tech Stack
