@@ -23,8 +23,6 @@ This backend handles WhatsApp webhook payloads, stores conversation data in Mong
 - **Framework:** Express.js
 - **Database:** MongoDB Atlas
 - **Real-time:** Socket.IO
-- **Authentication:** WhatsApp Business API
-- **Deployment:** Render
 
 
 ## Quick Start
@@ -33,7 +31,7 @@ This backend handles WhatsApp webhook payloads, stores conversation data in Mong
 
 - Node.js 18 or higher
 - MongoDB Atlas account
-- WhatsApp Business API credentials
+<!-- - WhatsApp Business API credentials -->
 
 
 ### Installation
